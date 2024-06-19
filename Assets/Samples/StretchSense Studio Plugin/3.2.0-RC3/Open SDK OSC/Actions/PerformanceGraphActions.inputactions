@@ -1,0 +1,56 @@
+{
+    "name": "PerformanceGraphActions",
+    "maps": [
+        {
+            "name": "PerformanceGraph",
+            "id": "4e728a86-35e6-40c5-b5a4-f5d896765558",
+            "actions": [
+                {
+                    "name": "CycleViewMode",
+                    "type": "Button",
+                    "id": "3f4c288a-7bd2-4ba5-ad42-fe3ccb46d085",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5d0c2cff-99f7-4865-bd0a-af6e82f1ce26",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CycleViewMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f728eb4-27be-4747-a822-4c1811176121",
+                    "path": "<XRController>{LeftHand}/{SecondaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CycleViewMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "200d168d-a60c-44ed-96b7-e1674d4240be",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CycleViewMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

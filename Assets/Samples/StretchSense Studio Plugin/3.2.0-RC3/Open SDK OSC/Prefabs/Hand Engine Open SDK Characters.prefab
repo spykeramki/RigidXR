@@ -1,0 +1,449 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2320843344780362314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604485635196270071}
+  - component: {fileID: 2845661910998048793}
+  m_Layer: 0
+  m_Name: Open SDK Applicator Auto Avatar B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1604485635196270071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320843344780362314}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4150236957011466026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2845661910998048793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320843344780362314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06850c1754c4774082d4ec9d17d170e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCharacter: {fileID: 0}
+  performerId: 2
+  autoSetup: 1
+  useMetacarpals: 0
+  characterJoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jointNameMapping:
+  - LeftThumbProximal
+  - LeftThumbIntermediate
+  - LeftThumbDistal
+  - LeftIndexProximal
+  - LeftIndexIntermediate
+  - LeftIndexDistal
+  - LeftMiddleProximal
+  - LeftMiddleIntermediate
+  - LeftMiddleDistal
+  - LeftRingProximal
+  - LeftRingIntermediate
+  - LeftRingDistal
+  - LeftLittleProximal
+  - LeftLittleIntermediate
+  - LeftLittleDistal
+  - RightThumbProximal
+  - RightThumbIntermediate
+  - RightThumbDistal
+  - RightIndexProximal
+  - RightIndexIntermediate
+  - RightIndexDistal
+  - RightMiddleProximal
+  - RightMiddleIntermediate
+  - RightMiddleDistal
+  - RightRingProximal
+  - RightRingIntermediate
+  - RightRingDistal
+  - RightLittleProximal
+  - RightLittleIntermediate
+  - RightLittleDistal
+  boneDataDictionary:
+    entries: []
+--- !u!1 &4142037140553041547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6608377802428795702}
+  - component: {fileID: 6703363785055662893}
+  m_Layer: 0
+  m_Name: Open SDK Applicator Auto Avatar C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6608377802428795702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142037140553041547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4150236957011466026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6703363785055662893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142037140553041547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06850c1754c4774082d4ec9d17d170e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCharacter: {fileID: 0}
+  performerId: 0
+  autoSetup: 1
+  useMetacarpals: 0
+  characterJoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jointNameMapping:
+  - LeftThumbProximal
+  - LeftThumbIntermediate
+  - LeftThumbDistal
+  - LeftIndexProximal
+  - LeftIndexIntermediate
+  - LeftIndexDistal
+  - LeftMiddleProximal
+  - LeftMiddleIntermediate
+  - LeftMiddleDistal
+  - LeftRingProximal
+  - LeftRingIntermediate
+  - LeftRingDistal
+  - LeftLittleProximal
+  - LeftLittleIntermediate
+  - LeftLittleDistal
+  - RightThumbProximal
+  - RightThumbIntermediate
+  - RightThumbDistal
+  - RightIndexProximal
+  - RightIndexIntermediate
+  - RightIndexDistal
+  - RightMiddleProximal
+  - RightMiddleIntermediate
+  - RightMiddleDistal
+  - RightRingProximal
+  - RightRingIntermediate
+  - RightRingDistal
+  - RightLittleProximal
+  - RightLittleIntermediate
+  - RightLittleDistal
+  boneDataDictionary:
+    entries: []
+--- !u!1 &6747989167344869594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4150236957011466026}
+  m_Layer: 0
+  m_Name: Hand Engine Open SDK Characters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4150236957011466026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747989167344869594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 655840126929494416}
+  - {fileID: 6608377802428795702}
+  - {fileID: 1604485635196270071}
+  - {fileID: 3614070835225434419}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8010964159225168362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3614070835225434419}
+  - component: {fileID: 5502105243089612833}
+  m_Layer: 0
+  m_Name: Open SDK Applicator Auto Avatar A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3614070835225434419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010964159225168362}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4150236957011466026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5502105243089612833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010964159225168362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06850c1754c4774082d4ec9d17d170e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCharacter: {fileID: 0}
+  performerId: 3
+  autoSetup: 1
+  useMetacarpals: 0
+  characterJoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jointNameMapping:
+  - LeftThumbProximal
+  - LeftThumbIntermediate
+  - LeftThumbDistal
+  - LeftIndexProximal
+  - LeftIndexIntermediate
+  - LeftIndexDistal
+  - LeftMiddleProximal
+  - LeftMiddleIntermediate
+  - LeftMiddleDistal
+  - LeftRingProximal
+  - LeftRingIntermediate
+  - LeftRingDistal
+  - LeftLittleProximal
+  - LeftLittleIntermediate
+  - LeftLittleDistal
+  - RightThumbProximal
+  - RightThumbIntermediate
+  - RightThumbDistal
+  - RightIndexProximal
+  - RightIndexIntermediate
+  - RightIndexDistal
+  - RightMiddleProximal
+  - RightMiddleIntermediate
+  - RightMiddleDistal
+  - RightRingProximal
+  - RightRingIntermediate
+  - RightRingDistal
+  - RightLittleProximal
+  - RightLittleIntermediate
+  - RightLittleDistal
+  boneDataDictionary:
+    entries: []
+--- !u!1 &8388962837123038119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655840126929494416}
+  - component: {fileID: 5439549176182510892}
+  m_Layer: 0
+  m_Name: Open SDK Receiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &655840126929494416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8388962837123038119}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4150236957011466026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5439549176182510892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8388962837123038119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9796a0a6c8bcb774a88d484f72c3e3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPort: 9400
+  applicators: []
+  debugMode: 1
+  m_OnBoneRotationReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnBoneMetacarpalReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnPerformerReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnGloveStatusReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHandSliderReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDongleStatusReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DebugOutput:
+    entries: []
+  oscReceiver: {fileID: 0}
+  m_Performers:
+    entries: []
+  m_Gloves:
+    entries: []
+  m_Dongles:
+    entries: []
+  m_HandSliders:
+    entries: []
