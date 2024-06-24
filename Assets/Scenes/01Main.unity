@@ -378,6 +378,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326388496}
+  - component: {fileID: 326388497}
+  - component: {fileID: 326388498}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -400,6 +402,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326388497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326388495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b896f4d066d4a2a47a6917bee3478ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 1819203053400279468, guid: 988ff6f79776cdb4e91b5ecfc23cfb3b,
+    type: 3}
+  spawnLabel: 8
+  ovrCameraRig: {fileID: 188315682093293037}
+  spawnPosition: 0
+--- !u!114 &326388498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326388495}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d14e43228043c04db9e374568cb89a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnOnStart: 1
+  SpawnObject: {fileID: 1819203053400279468, guid: 988ff6f79776cdb4e91b5ecfc23cfb3b,
+    type: 3}
+  SpawnAmount: 1
+  MaxIterations: 100
+  SpawnLocations: 3
+  Labels: 8
+  CheckOverlaps: 1
+  OverrideBounds: -1
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  SurfaceClearanceDistance: 0.1
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4564,7 +4608,19 @@ MonoBehaviour:
       m_Calls: []
   <RoomCreatedEvent>k__BackingField:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 326388497}
+        m_TargetAssemblyTypeName: SpawnerCtrl, Assembly-CSharp
+        m_MethodName: SpawnPrefabOnDefinedAnchor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   <RoomUpdatedEvent>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
@@ -4580,9 +4636,7 @@ MonoBehaviour:
     - {fileID: 5618556046422172173, guid: 029ede24e76b24d0888dc235dd0b96f2, type: 3}
     - {fileID: 5618556046422172173, guid: caa3755f1f2184eb7a9fd17b7cf1f1d3, type: 3}
     - {fileID: 1766085727792645261, guid: 989283c9dcb36a24aac11a601001dce0, type: 3}
-    - {fileID: 5618556046422172173, guid: b2217186fc11b47638c925d674e7f526, type: 3}
     - {fileID: 5618556046422172173, guid: 531aeca35d703a64cb0e1fd73a128fc0, type: 3}
-    - {fileID: 5618556046422172173, guid: 3aaa7f66d6713834ca31af8c3d9bebda, type: 3}
     - {fileID: 5618556046422172173, guid: 1550cf68ffa5a344e881275021bc3ffe, type: 3}
     - {fileID: 5618556046422172173, guid: 31818101cde292945ab80af5d14bec54, type: 3}
     - {fileID: 5618556046422172173, guid: c2bd5595e9fe2493a92d4bc0bb264603, type: 3}
