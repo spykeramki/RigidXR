@@ -43,7 +43,7 @@ public class TheraminVolumeCtrl : MonoBehaviour
             }
             Debug.Log(valueToBeAdjusted + " pitch valueToBeAdjusted");
             Debug.Log(smallestDistance + "smallest distance");
-            //theraminCtrl.AdjustAudioPitch(valueToBeAdjusted);
+            theraminCtrl.AdjustAudioVolume(valueToBeAdjusted);
         }
     }
 
