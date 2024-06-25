@@ -2,6 +2,7 @@ using Meta.XR.MRUtilityKit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SpawnerCtrl : MonoBehaviour
 {
@@ -11,19 +12,24 @@ public class SpawnerCtrl : MonoBehaviour
         SHORT_EDGE,
         LONG_EDGE
     }
+    public enum SpawnDirection
+    {
+        TOWARDS_ANCHOR,
+        AWAY_FROM_ANCHOR
+    }
     public GameObject spawnPrefab;
     public MRUKAnchor.SceneLabels spawnLabel;
     public OVRCameraRig ovrCameraRig;
     public SpawnPosition spawnPosition;
+    public SpawnDirection spawnDirection;
 
     private void Start()
     {
-        SpawnPrefabOnDefinedAnchor();
+        Invoke("SpawnPrefabOnDefinedAnchor", 2f);
     }
 
     public void SpawnPrefabOnDefinedAnchor()
     {
-        Debug.Log("1");
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
         List<MRUKAnchor> roomAnchors = room.GetRoomAnchors();
         List<MRUKAnchor> specificLabelAnchors = new List<MRUKAnchor>();
@@ -31,13 +37,11 @@ public class SpawnerCtrl : MonoBehaviour
         {
             if ((LabelFilter.FromEnum(spawnLabel)).PassesFilter(anchor.AnchorLabels))
             {
-                Debug.Log(anchor.AnchorLabels[0] + " first label");
                 specificLabelAnchors.Add(anchor);
             }
         }
         MRUKAnchor nearestAnchor = null;
 
-        Debug.Log(specificLabelAnchors.Count + " specificLabelAnchors count");
         if (specificLabelAnchors.Count > 0) { 
 
             nearestAnchor = specificLabelAnchors[0];
@@ -63,11 +67,13 @@ public class SpawnerCtrl : MonoBehaviour
             {
                 if (anchorSize.y > anchorSize.x)
                 {
-                    position = nearestAnchor.transform.localPosition + new Vector3(anchorSize.x/2, 0f, 0f);
+                    //position = nearestAnchor.transform.localPosition + new Vector3(anchorSize.x/2, 0f, 0f);
+                    position = ShortestPointFromUser(nearestAnchor.transform.localPosition, new Vector3(anchorSize.x / 2, 0f, 0f), ovrCameraRig.centerEyeAnchor.position);
                 }
                 else if(anchorSize.y < anchorSize.x)
                 {
-                    position = nearestAnchor.transform.localPosition + new Vector3(0f, 0f, anchorSize.y / 2);
+                    //position = nearestAnchor.transform.localPosition + new Vector3(0f, 0f, anchorSize.y / 2);
+                    position = ShortestPointFromUser(nearestAnchor.transform.localPosition, new Vector3(0f, 0f, anchorSize.y / 2), ovrCameraRig.centerEyeAnchor.position);
 
                 }
             }
@@ -82,9 +88,31 @@ public class SpawnerCtrl : MonoBehaviour
                     position = nearestAnchor.transform.localPosition + new Vector3(anchorSize.x / 2, 0f, 0f);
                 }
             }
-
-            Quaternion direction = Quaternion.LookRotation((nearestAnchor.transform.position - position).normalized);
+            Quaternion direction;
+            if (spawnDirection == SpawnDirection.TOWARDS_ANCHOR)
+            {
+                direction = Quaternion.LookRotation((nearestAnchor.transform.position - position));
+            }
+            else
+            {
+                direction = Quaternion.LookRotation((position - nearestAnchor.transform.position));
+            }
             Instantiate(spawnPrefab, position, direction);
         }
+    }
+
+    private Vector3 ShortestPointFromUser(Vector3 pos1, Vector3 pos2, Vector3 posRef)
+    {
+        Vector3 posA = pos1 + pos2;
+        Vector3 posB = pos1 - pos2;
+
+        float distanceA = Vector3.Distance(posA, posRef);
+        float distanceB = Vector3.Distance(posB, posRef);
+
+        if(distanceA < distanceB)
+        {
+            return posA;
+        }
+        else { return posB; }
     }
 }
