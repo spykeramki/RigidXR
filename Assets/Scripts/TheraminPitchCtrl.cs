@@ -37,12 +37,10 @@ public class TheraminPitchCtrl : MonoBehaviour
                 }
             }
             float valueToBeAdjusted = 1 - (smallestDistance / maxTriggerDistance);
-            if (valueToBeAdjusted < 0)
+            if (valueToBeAdjusted < 0.1f)
             {
-                valueToBeAdjusted = 0;
+                valueToBeAdjusted = 0.1f;
             }
-            Debug.Log(valueToBeAdjusted + " pitch valueToBeAdjusted"); 
-            Debug.Log(smallestDistance + "smallest distance");
             theraminCtrl.AdjustAudioPitch(valueToBeAdjusted);
         }
     }

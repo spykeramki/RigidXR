@@ -97,7 +97,7 @@ public class SpawnerCtrl : MonoBehaviour
             {
                 direction = Quaternion.LookRotation((position - nearestAnchor.transform.position));
             }
-            Instantiate(spawnPrefab, position, direction);
+            Instantiate(spawnPrefab, position, direction, nearestAnchor.transform);
         }
     }
 

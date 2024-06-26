@@ -41,8 +41,6 @@ public class TheraminVolumeCtrl : MonoBehaviour
             {
                 valueToBeAdjusted = 0;
             }
-            Debug.Log(valueToBeAdjusted + " pitch valueToBeAdjusted");
-            Debug.Log(smallestDistance + "smallest distance");
             theraminCtrl.AdjustAudioVolume(valueToBeAdjusted);
         }
     }
