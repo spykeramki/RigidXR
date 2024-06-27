@@ -414,12 +414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b896f4d066d4a2a47a6917bee3478ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 1819203053400279468, guid: 988ff6f79776cdb4e91b5ecfc23cfb3b,
+  spawnPrefab: {fileID: 5223359648827175369, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
     type: 3}
   spawnLabel: 8
   ovrCameraRig: {fileID: 188315682093293037}
-  spawnPosition: 2
-  spawnDirection: 1
+  viewDirection: 0
 --- !u!114 &326388498
 MonoBehaviour:
   m_ObjectHideFlags: 0

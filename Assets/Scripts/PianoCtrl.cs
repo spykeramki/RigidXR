@@ -16,21 +16,6 @@ public class PianoCtrl : MonoBehaviour
 
     public List<KeySounds> keySounds;
 
-    private void Update()
-    {
-        Vector2 rightCtrlJoystickInput = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
-        if(rightCtrlJoystickInput!=null && rightCtrlJoystickInput.x > 0)
-        {
-            TurnPiano(rightCtrlJoystickInput.x);
-        }
-    }
-
-    public void TurnPiano(float inputAxis = 0f)
-    {
-        transform.Rotate(0f, speed * Time.deltaTime * inputAxis, 0f);
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "PianoKey")
