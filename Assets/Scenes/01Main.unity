@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b896f4d066d4a2a47a6917bee3478ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 5223359648827175369, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
+  spawnPrefab: {fileID: 2799827660477277890, guid: b0412e2aad3e172499d7386c10ad3106,
     type: 3}
   spawnLabel: 8
   ovrCameraRig: {fileID: 188315682093293037}
