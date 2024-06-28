@@ -20,7 +20,7 @@ public class PianoCtrl : MonoBehaviour
     {
         if(other.tag == "PianoKey")
         {
-            other.GetComponent<AudioSource>().Play();
+            other.GetComponent<PianoKeyCtrl>().PlayAudio();
         }
     }
 
@@ -28,27 +28,7 @@ public class PianoCtrl : MonoBehaviour
     {
         if (other.tag == "PianoKey")
         {
-            StartCoroutine(ReduceSoundSlowly(other.GetComponent<AudioSource>()));
+            other.GetComponent<PianoKeyCtrl>().StartStoppingEffect();
         }
     }
-
-    private IEnumerator ReduceSoundSlowly(AudioSource audioSource)
-    {
-        float volume = 1f;
-        while(volume > 0f)
-        {
-            volume -= 0.004f;
-            audioSource.volume = volume;
-            yield return new WaitForEndOfFrame();
-        }
-
-        if(volume <= 0f)
-        {
-            audioSource.volume = 1f;
-            audioSource.Stop();
-            StopCoroutine(ReduceSoundSlowly(audioSource));
-        }
-    }
-
-
 }
