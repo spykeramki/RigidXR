@@ -8,8 +8,8 @@ public class TheraminCtrl : MonoBehaviour
     [SerializeField]
     private AudioMixer audioMixer;
 
-    private string VOLUME = "Volume";
-    private string PITCH = "Pitch";
+    //private string VOLUME = "Volume";
+    //private string PITCH = "Pitch";
 
     [SerializeField]
     private AudioSource audioSource;

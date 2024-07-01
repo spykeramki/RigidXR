@@ -55,7 +55,7 @@ public class SpawnerCtrl : MonoBehaviour
     public void SpawnsPrefabOnDefinedAnchor()
     {
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
-        List<MRUKAnchor> roomAnchors = room.GetRoomAnchors();
+        List<MRUKAnchor> roomAnchors = room.Anchors;
         List<MRUKAnchor> specificLabelAnchors = new List<MRUKAnchor>();
         foreach (MRUKAnchor anchor in roomAnchors)
         {
