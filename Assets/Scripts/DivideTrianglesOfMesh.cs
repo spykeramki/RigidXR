@@ -12,10 +12,21 @@ public class DivideTrianglesOfMesh : MonoBehaviour
 
     private Material m_Material;
 
+    private bool isDestroyInvoked = false;
+    public bool IsDestroyInvoked
+    {
+        get { return isDestroyInvoked; }
+    }
+
     private List<GameObject> meshTriangles = new List<GameObject>();
     public List<GameObject> MeshTriangles
     {
         get { return meshTriangles; }
+    }
+
+    public float TrianglesToDestroy
+    {
+        get => meshTriangles.Count;
     }
 
     private void Start()
@@ -56,7 +67,9 @@ public class DivideTrianglesOfMesh : MonoBehaviour
             Mesh mesh = new Mesh();
             MeshFilter triangleMeshFilter = go.AddComponent<MeshFilter>();
             MeshRenderer triangleRenderer = go.AddComponent<MeshRenderer>();
+            go.AddComponent<TriangleCtrl>();
             //MeshCollider triangleMeshCollider = go.AddComponent<MeshCollider>();
+            Rigidbody rb = go.AddComponent<Rigidbody>();
 
             List<Vector3> eachTriangleVertices = new List<Vector3>();
             foreach (int vertexIndex in eachTriangle)
@@ -70,12 +83,69 @@ public class DivideTrianglesOfMesh : MonoBehaviour
 
             triangleMeshFilter.mesh = mesh;
             triangleRenderer.material = m_Material;
+            rb.useGravity = false;
             //triangleMeshCollider.convex = true;
             //triangleMeshCollider.sharedMesh = mesh;
 
             meshTriangles.Add(go);
 
         }
+        
+    }
+
+    private void StartSendingTrianglesFlyAway()
+    {
+        StartCoroutine(SendTrianglesFlying());
+    }
+
+    private IEnumerator SendTrianglesFlying()
+    {
+        int trianglesCount = meshTriangles.Count;
+        while (meshTriangles.Count >= 0)
+        {
+            trianglesCount = meshTriangles.Count;
+            int trianglesListIndex = Random.Range(0, trianglesCount);
+            float force = Random.Range(20f, 30f);
+            float timing = Random.Range(0.5f, 1f);
+            TriangleCtrl triangleCtrl = meshTriangles[trianglesListIndex].GetComponent<TriangleCtrl>();
+            triangleCtrl.ObjRigidbody.AddForce(((triangleCtrl.ObjTransform.position - Vector3.zero).normalized) * force);
+            triangleCtrl.StartTimerToDestroyObject(10f);
+            meshTriangles.Remove(triangleCtrl.gameObject);
+            yield return new WaitForSeconds(timing);
+        }
+
+        if(trianglesCount < 0)
+        {
+            StopCoroutine("SendTrianglesFlying");
+            Destroy(gameObject);
+        }
+    }
+
+    public void SendTrianglesFlyingOnInteraction()
+    {
+        int trianglesListCount = meshTriangles.Count;
+        float timerToDestroy = 10f;
+        if (trianglesListCount > 0)
+        {
+            float force = Random.Range(20f, 30f);
+            TriangleCtrl triangleCtrl = meshTriangles[trianglesListCount-1].GetComponent<TriangleCtrl>();
+            triangleCtrl.ObjRigidbody.AddForce(((triangleCtrl.ObjTransform.position - Vector3.zero).normalized) * force);
+            triangleCtrl.StartTimerToDestroyObject(timerToDestroy);
+            meshTriangles.Remove(triangleCtrl.gameObject);
+        }
+        else 
+        {
+            if (!isDestroyInvoked)
+            {
+                isDestroyInvoked = true;
+                Invoke("DestroyPlane", timerToDestroy);
+            }
+        }
+    }
+
+    private void DestroyPlane()
+    {
+        Destroy(gameObject);
     }
 
 }

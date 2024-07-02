@@ -7,21 +7,33 @@ public class GenerateDestroyablePlane : MonoBehaviour
 {
     public GameObject prefabToInstantiate;
 
+    public List<DivideTrianglesOfMesh> planesGenerated = new List<DivideTrianglesOfMesh>();
+
+    private DivideTrianglesOfMesh currentPlaneDestroying = null;
+
     private void Start()
     {
         Invoke("ReplaceGeneratedMeshWithTriangles", 2f);
     }
 
+    /*private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            DestoryTianglesInPlanes();
+        }
+    }*/
+
     public void ReplaceGeneratedMeshWithTriangles()
     {
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
         List<MRUKAnchor> anchorsToGenerateTriangles = room.WallAnchors;
-        anchorsToGenerateTriangles.Add(room.CeilingAnchor);
+        anchorsToGenerateTriangles.Insert(0, room.CeilingAnchor);
 
         foreach (MRUKAnchor anchor in anchorsToGenerateTriangles)
         {
             SetPlaneToMesh(anchor);
         }
+        currentPlaneDestroying = planesGenerated[0];
     }
 
     private void SetPlaneToMesh(MRUKAnchor anchor)
@@ -39,6 +51,24 @@ public class GenerateDestroyablePlane : MonoBehaviour
         planeGenerated.transform.localPosition = Vector3.zero;
         planeGenerated.transform.localRotation = Quaternion.Euler(90f, 0f, 0f);
 
+        planesGenerated.Add(planeGenerated.GetComponent<DivideTrianglesOfMesh>());
+
         anchorMeshTransform.GetComponent<MeshRenderer>().enabled = false;
+    }
+
+    public void DestoryTianglesInPlanes()
+    {
+        if(planesGenerated.Count > 0)
+        {
+            if (!currentPlaneDestroying.IsDestroyInvoked)
+            {
+                currentPlaneDestroying.SendTrianglesFlyingOnInteraction();
+            }
+            else
+            {
+                planesGenerated.RemoveAt(0);
+                currentPlaneDestroying = (planesGenerated.Count > 0) ? planesGenerated[0]: null;
+            }
+        }
     }
 }

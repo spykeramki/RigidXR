@@ -44,4 +44,9 @@ public class PianoKeyCtrl : MonoBehaviour
             StopCoroutine(ReduceSoundSlowly());
         }
     }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
 }

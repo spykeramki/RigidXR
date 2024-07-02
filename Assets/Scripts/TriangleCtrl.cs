@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TriangleCtrl : MonoBehaviour
 {
-    private MeshRenderer m_MeshRenderer;
-    private MeshFilter m_MeshFilter;
-    private MeshCollider m_MeshCollider;
+    public MeshRenderer m_MeshRenderer;
+    public MeshFilter m_MeshFilter;
+    public Rigidbody m_Rigidbody;
+    public Transform ObjTransform;
 
     public MeshRenderer ObjMeshRenderer
     {
@@ -18,15 +19,42 @@ public class TriangleCtrl : MonoBehaviour
         get { return m_MeshFilter; }
     }
 
-    public MeshCollider ObjMeshCollider
+    public Rigidbody ObjRigidbody
     {
-        get { return m_MeshCollider; }
+        get { return m_Rigidbody; }
     }
 
-    private void Awake()
+
+
+    private void Start()
     {
         m_MeshRenderer = GetComponent<MeshRenderer>();
         m_MeshFilter = GetComponent<MeshFilter>();
-        m_MeshCollider = GetComponent<MeshCollider>();
+        m_Rigidbody = GetComponent<Rigidbody>();
+        ObjTransform = transform;
+    }
+
+    public void StartTimerToDestroyObject(float timer)
+    {
+        StartCoroutine(TimerToDestroyObject(timer));
+    }
+
+    private IEnumerator TimerToDestroyObject(float timer)
+    {
+        while(timer > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            timer--;
+        }
+        if(timer <= 0)
+        {
+            StopAllCoroutines();
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }

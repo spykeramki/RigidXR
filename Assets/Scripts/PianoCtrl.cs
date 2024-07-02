@@ -16,11 +16,19 @@ public class PianoCtrl : MonoBehaviour
 
     public List<KeySounds> keySounds;
 
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "PianoKey")
         {
             other.GetComponent<PianoKeyCtrl>().PlayAudio();
+            gameManager.destroyablePlaneParentCtrl.DestoryTianglesInPlanes();
         }
     }
 
