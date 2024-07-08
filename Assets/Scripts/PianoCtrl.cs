@@ -25,18 +25,12 @@ public class PianoCtrl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "PianoKey")
-        {
-            other.GetComponent<PianoKeyCtrl>().PlayAudio();
-            gameManager.destroyablePlaneParentCtrl.DestoryTianglesInPlanes();
-        }
+        other.GetComponent<PianoKeyCtrl>().PlayAudio();
+        gameManager.destroyablePlaneParentCtrl.DestoryTianglesInPlanes();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "PianoKey")
-        {
-            other.GetComponent<PianoKeyCtrl>().StartStoppingEffect();
-        }
+        other.GetComponent<PianoKeyCtrl>().StartStoppingEffect();
     }
 }

@@ -16,13 +16,6 @@ public class GenerateDestroyablePlane : MonoBehaviour
         Invoke("ReplaceGeneratedMeshWithTriangles", 2f);
     }
 
-    /*private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            DestoryTianglesInPlanes();
-        }
-    }*/
-
     public void ReplaceGeneratedMeshWithTriangles()
     {
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();

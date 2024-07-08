@@ -40,6 +40,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4482410456705513435}
     m_Modifications:
+    - target: {fileID: 711866182845769792, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 375
+      objectReference: {fileID: 0}
     - target: {fileID: 4843279732588129139, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48,7 +53,7 @@ PrefabInstance:
     - target: {fileID: 4843279732588129139, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.015
+      value: -0.032
       objectReference: {fileID: 0}
     - target: {fileID: 4843279732588129139, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
         type: 3}
@@ -99,6 +104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rolloffMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409235935799672269, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
