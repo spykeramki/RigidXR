@@ -21,6 +21,7 @@ public class GenerateDestroyablePlane : MonoBehaviour
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
         List<MRUKAnchor> anchorsToGenerateTriangles = room.WallAnchors;
         anchorsToGenerateTriangles.Insert(0, room.CeilingAnchor);
+        anchorsToGenerateTriangles.Add(room.FloorAnchor);
 
         foreach (MRUKAnchor anchor in anchorsToGenerateTriangles)
         {
@@ -55,7 +56,10 @@ public class GenerateDestroyablePlane : MonoBehaviour
         {
             if (!currentPlaneDestroying.IsDestroyInvoked)
             {
-                currentPlaneDestroying.SendTrianglesFlyingOnInteraction();
+                for (int i = 0; i<3; i++)
+                {
+                    currentPlaneDestroying.SendTrianglesFlyingOnInteraction();
+                }
             }
             else
             {

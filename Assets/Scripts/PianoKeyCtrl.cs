@@ -32,7 +32,7 @@ public class PianoKeyCtrl : MonoBehaviour
         float volume = 1f;
         while (volume > 0f)
         {
-            volume -= 0.004f;
+            volume -= 0.008f;
             audioSource.volume = volume;
             yield return new WaitForEndOfFrame();
         }

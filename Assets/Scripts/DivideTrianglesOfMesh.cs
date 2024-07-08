@@ -18,8 +18,8 @@ public class DivideTrianglesOfMesh : MonoBehaviour
         get { return isDestroyInvoked; }
     }
 
-    private List<GameObject> meshTriangles = new List<GameObject>();
-    public List<GameObject> MeshTriangles
+    private List<TriangleCtrl> meshTriangles = new List<TriangleCtrl>();
+    public List<TriangleCtrl> MeshTriangles
     {
         get { return meshTriangles; }
     }
@@ -67,7 +67,7 @@ public class DivideTrianglesOfMesh : MonoBehaviour
             Mesh mesh = new Mesh();
             MeshFilter triangleMeshFilter = go.AddComponent<MeshFilter>();
             MeshRenderer triangleRenderer = go.AddComponent<MeshRenderer>();
-            go.AddComponent<TriangleCtrl>();
+            TriangleCtrl triangleCtrl =  go.AddComponent<TriangleCtrl>();
             //MeshCollider triangleMeshCollider = go.AddComponent<MeshCollider>();
             Rigidbody rb = go.AddComponent<Rigidbody>();
 
@@ -87,12 +87,12 @@ public class DivideTrianglesOfMesh : MonoBehaviour
             //triangleMeshCollider.convex = true;
             //triangleMeshCollider.sharedMesh = mesh;
 
-            meshTriangles.Add(go);
+            meshTriangles.Add(triangleCtrl);
 
         }
         
     }
-
+/*
     private void StartSendingTrianglesFlyAway()
     {
         StartCoroutine(SendTrianglesFlying());
@@ -119,7 +119,7 @@ public class DivideTrianglesOfMesh : MonoBehaviour
             StopCoroutine("SendTrianglesFlying");
             Destroy(gameObject);
         }
-    }
+    }*/
 
     public void SendTrianglesFlyingOnInteraction()
     {
@@ -128,10 +128,10 @@ public class DivideTrianglesOfMesh : MonoBehaviour
         if (trianglesListCount > 0)
         {
             float force = Random.Range(20f, 30f);
-            TriangleCtrl triangleCtrl = meshTriangles[trianglesListCount-1].GetComponent<TriangleCtrl>();
+            TriangleCtrl triangleCtrl = meshTriangles[trianglesListCount - 1];
             triangleCtrl.ObjRigidbody.AddForce(((triangleCtrl.ObjTransform.position - Vector3.zero).normalized) * force);
             triangleCtrl.StartTimerToDestroyObject(timerToDestroy);
-            meshTriangles.Remove(triangleCtrl.gameObject);
+            meshTriangles.Remove(triangleCtrl);
         }
         else 
         {
@@ -142,6 +142,7 @@ public class DivideTrianglesOfMesh : MonoBehaviour
             }
         }
     }
+
 
     private void DestroyPlane()
     {
