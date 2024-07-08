@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 1.4, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8496668720655656753}
@@ -40,11 +40,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4482410456705513435}
     m_Modifications:
-    - target: {fileID: 711866182845769792, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
-        type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 375
-      objectReference: {fileID: 0}
     - target: {fileID: 4843279732588129139, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -99,16 +94,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piano
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827609956628713097, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6409235935799672269, guid: 6112c02367bd7e8449ce2fbb9b0dbbea,
-        type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
