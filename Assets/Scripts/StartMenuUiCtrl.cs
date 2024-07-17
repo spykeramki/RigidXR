@@ -7,21 +7,24 @@ using UnityEngine.SceneManagement;
 public class StartMenuUiCtrl : MonoBehaviour
 {
     public Transform desk;
-    private Vector3 tableOffset = new Vector3(0f, 1.037f, 0f);
-
-    private void Awake()
-    {
-        SceneManager.sceneLoaded += AttachDeskToTheTable;
-    }
+    private Vector3 tableOffset = new Vector3(0f, -0.021f, 0f);
 
     public void OnClickPlayBtn()
     {
         SceneManager.LoadScene("01Main");
     }
-    private void AttachDeskToTheTable(Scene scene, LoadSceneMode loadSceneMode)
+
+    private void Update()
     {
-        if (scene.name == "00Start")
+        if (OVRInput.GetDown(OVRInput.Button.Two))
         {
+            ChangeDeskDirection();
+        }
+    }
+
+    public void AttachDeskToTheTable()
+    {
+        
             MRUKRoom room = MRUK.Instance.GetCurrentRoom();
             MRUKAnchor tableAnchor = room.Anchors.Find((tableAnchor) =>
             {
@@ -31,17 +34,15 @@ public class StartMenuUiCtrl : MonoBehaviour
             if (tableAnchor != null)
             {
                 desk.position = tableAnchor.transform.position + tableOffset;
-                desk.up = tableAnchor.transform.forward;
-                desk.forward = tableAnchor.transform.right;
-                //desk.Lo
-                //desk.rotation = tableAnchor.transform.rotation;
-            }
+                Quaternion rotation = Quaternion.LookRotation(-1 *tableAnchor.transform.up, Vector3.up);
+                desk.rotation = rotation;
         }
     }
 
-    private void OnDestroy()
+    private void ChangeDeskDirection()
     {
-        SceneManager.sceneLoaded -= AttachDeskToTheTable;
+        desk.Rotate(new Vector3(0f, desk.rotation.y + 90f, 0f));
     }
+
 }
 

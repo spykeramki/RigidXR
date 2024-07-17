@@ -724,13 +724,13 @@ MonoBehaviour:
   BorderSize: 0
   Colliders: 0
   CutHoles: 0
-  castShadows: 1
+  castShadows: 0
   hideMesh: 0
   textureCoordinateModes:
   - WallU: 5
     WallV: 2
     AnchorUV: 1
-  Labels: 15
+  Labels: 7
 --- !u!114 &356790831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,6 +1013,82 @@ CapsuleCollider:
   m_Height: 0.034
   m_Direction: 0
   m_Center: {x: 0.017, y: 0, z: 0}
+--- !u!1 &437825771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437825775}
+  - component: {fileID: 437825774}
+  - component: {fileID: 437825773}
+  m_Layer: 0
+  m_Name: '[BuildingBlock] Effect Mesh Table'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &437825773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437825771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76943ac7e7394f3e969f0c048b26639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnOnStart: 1
+  TrackUpdates: 1
+  MeshMaterial: {fileID: 2100000, guid: 3f5b341f0eb90fb48b68cf81edca5e3b, type: 2}
+  BorderSize: 0
+  Colliders: 0
+  CutHoles: 0
+  castShadows: 0
+  hideMesh: 0
+  textureCoordinateModes:
+  - WallU: 5
+    WallV: 2
+    AnchorUV: 1
+  Labels: 8
+--- !u!114 &437825774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437825771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockId: 65c6e778-10b3-4490-89da-008a18aa116a
+  instanceId: 512b9001-b904-44f7-8b0e-605ddaa57d0e
+  version: 1
+  installationRoutineCheckpoint:
+    _installationRoutineId: 
+    _installationVariants: []
+--- !u!4 &437825775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437825771}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &475491313 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 445223035775455779, guid: bf187b68367fbbc4680e2f3a3677e9a5,
@@ -1931,7 +2007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -5629,6 +5705,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.03773582
       objectReference: {fileID: 0}
+    - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: _trackingOriginType
       value: 1
@@ -9287,6 +9367,7 @@ SceneRoots:
   - {fileID: 1558486505446993698}
   - {fileID: 1710265555}
   - {fileID: 356790832}
+  - {fileID: 437825775}
   - {fileID: 326388496}
   - {fileID: 1161376996}
   - {fileID: 1102611259}

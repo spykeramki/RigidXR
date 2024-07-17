@@ -2,7 +2,6 @@ using Meta.XR.MRUtilityKit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SpawnerCtrl : MonoBehaviour
 {
@@ -71,8 +70,8 @@ public class SpawnerCtrl : MonoBehaviour
             nearestAnchor = specificLabelAnchors[0];
             foreach (MRUKAnchor anchor in specificLabelAnchors)
             {
-                if (Vector3.Distance(anchor.transform.position, ovrCameraRig.centerEyeAnchor.position) <
-                    Vector3.Distance(nearestAnchor.transform.position, ovrCameraRig.centerEyeAnchor.position))
+                if (GetDistanceFromPlayer(anchor.transform.position) <
+                    GetDistanceFromPlayer(nearestAnchor.transform.position))
                 {
                     nearestAnchor = anchor;
                 }
@@ -100,24 +99,39 @@ public class SpawnerCtrl : MonoBehaviour
                 }
                 
             }
+
             if (anchorPlaneMidCenters.Count > 0)
             {
-                Vector3 position = anchorPlaneMidCenters[currentPoint];
+                Vector3 nearestMidPositionInWorld = nearestAnchor.transform.TransformPoint(anchorPlaneMidCenters[currentPoint]) ;
+                for(int i = 0; i < anchorPlaneMidCenters.Count; i++)
+                {
+                    Vector3 pos = nearestAnchor.transform.TransformPoint(anchorPlaneMidCenters[i]);
+                    if (GetDistanceFromPlayer(pos) < GetDistanceFromPlayer(nearestMidPositionInWorld))
+                    {
+                        currentPoint = i;
+                        nearestMidPositionInWorld = pos;
+                    }
+                }
 
                 Quaternion direction;
                 if(viewDirection == ViewDirection.TOWARDS)
                 {
-                    direction =  Quaternion.LookRotation((nearestAnchor.transform.position - nearestAnchor.transform.TransformPoint(position)));
+                    direction =  Quaternion.LookRotation((nearestAnchor.transform.position - nearestMidPositionInWorld));
                 }
                 else
                 {
-                    direction = Quaternion.LookRotation((nearestAnchor.transform.TransformPoint(position) - nearestAnchor.transform.position));
+                    direction = Quaternion.LookRotation((nearestMidPositionInWorld - nearestAnchor.transform.position));
                 }
 
-                GameObject spawnedObject = Instantiate(spawnPrefab, nearestAnchor.transform.TransformPoint(position), direction, nearestAnchor.transform);
+                GameObject spawnedObject = Instantiate(spawnPrefab, nearestMidPositionInWorld, direction, nearestAnchor.transform);
                 spawnedObjTransform = spawnedObject.transform;
             }
         }
+    }
+
+    private float GetDistanceFromPlayer(Vector3 pos)
+    {
+        return Vector3.Distance(pos, ovrCameraRig.centerEyeAnchor.position);
     }
 
     private void ChangeObjPosition()
@@ -139,6 +153,5 @@ public class SpawnerCtrl : MonoBehaviour
         }
         spawnedObjTransform.localPosition = anchorPlaneMidCenters[currentPoint];
         spawnedObjTransform.rotation = direction;
-        //spawnedObjTransform.rotation = Quaternion.LookRotation((new Vector3(0f, 0f, 0f) - position));
     }
 }

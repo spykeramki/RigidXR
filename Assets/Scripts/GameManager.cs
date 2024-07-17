@@ -8,8 +8,20 @@ public class GameManager : MonoBehaviour
 
     public GenerateDestroyablePlane destroyablePlaneParentCtrl;
 
+    private float _skyboxRotation = 0f;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void LateUpdate()
+    {
+        _skyboxRotation += Time.deltaTime;
+        if(_skyboxRotation >= 360f)
+        {
+            _skyboxRotation = 0f;
+        }
+        RenderSettings.skybox.SetFloat("_Rotation", _skyboxRotation);
     }
 }
