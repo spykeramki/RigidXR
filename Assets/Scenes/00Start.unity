@@ -4614,7 +4614,7 @@ PrefabInstance:
     - target: {fileID: 2633246554278333936, guid: afb1615dd3b243a449003594175d971a,
         type: 3}
       propertyPath: m_text
-      value: Stretch It
+      value: Rigid XR
       objectReference: {fileID: 0}
     - target: {fileID: 2633246554278333936, guid: afb1615dd3b243a449003594175d971a,
         type: 3}

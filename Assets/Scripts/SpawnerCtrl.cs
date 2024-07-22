@@ -19,11 +19,6 @@ public class SpawnerCtrl : MonoBehaviour
     private int currentPoint = 0;
     private MRUKAnchor nearestAnchor = null;
 
-    private void Start()
-    {
-        Invoke("SpawnsPrefabOnDefinedAnchor", 2f);
-    }
-
     private Transform spawnedObjTransform;
 
     private void Update()
