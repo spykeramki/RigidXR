@@ -9,9 +9,9 @@ public class StartMenuUiCtrl : MonoBehaviour
     public Transform desk;
     private Vector3 tableOffset = new Vector3(0f, -0.021f, 0f);
 
-    public void OnClickPlayBtn()
+    public void OnClickPlayBtn(string sceneName)
     {
-        SceneManager.LoadScene("01Main");
+        SceneManager.LoadScene(sceneName);
     }
 
     private void Update()

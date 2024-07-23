@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PianoCtrl : MonoBehaviour
 {
@@ -35,5 +36,10 @@ public class PianoCtrl : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         other.GetComponent<PianoKeyCtrl>().StartStoppingEffect();
+    }
+
+    public void OnClickExitBtn()
+    {
+        SceneManager.LoadScene("00Start");
     }
 }

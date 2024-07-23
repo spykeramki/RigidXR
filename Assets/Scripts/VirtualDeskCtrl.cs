@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class VirtualDeskCtrl : MonoBehaviour
 {
-    private Vector3 tableOffset = new Vector3(0f, -0.021f, 0f);
+    private Vector3 tableOffset = new Vector3(0f, -0.2f, 0f);
     public void AttachDeskToTheTable()
     {
 
