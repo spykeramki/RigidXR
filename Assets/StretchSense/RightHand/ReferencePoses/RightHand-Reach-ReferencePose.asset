@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -109005470, guid: a0cd9a58d974b9548ba272b50a233cc3, type: 3}
+  m_Name: RightHand-Reach-ReferencePose
+  m_EditorClassIdentifier: 
+  hand: 0
+  names:
+  - b_r_forearm_stub
+  - b_r_index1
+  - b_r_index2
+  - b_r_index3
+  - b_r_index_null
+  - r_index_finger_pad_marker
+  - r_index_finger_tip_marker
+  - r_index_fingernail_marker
+  - r_index_dip_fe_axis_marker
+  - r_index_pip_fe_axis_marker
+  - b_r_middle1
+  - b_r_middle2
+  - b_r_middle3
+  - b_r_middle_null
+  - r_middle_finger_pad_marker
+  - r_middle_finger_tip_marker
+  - r_middle_fingernail_marker
+  - r_middle_dip_fe_axis_marker
+  - r_middle_knuckle_marker
+  - r_middle_pip_fe_axis_marker
+  - b_r_pinky0
+  - b_r_pinky1
+  - b_r_pinky2
+  - b_r_pinky3
+  - b_r_pinky_null
+  - r_pinky_finger_pad_marker
+  - r_pinky_finger_tip_marker
+  - r_pinky_fingernail_marker
+  - r_pinky_dip_fe_axis_marker
+  - r_pinky_pip_fe_axis_marker
+  - b_r_ring1
+  - b_r_ring2
+  - b_r_ring3
+  - b_r_ring_null
+  - r_ring_finger_pad_marker
+  - r_ring_finger_tip_marker
+  - r_ring_fingernail_marker
+  - r_ring_dip_fe_axis_marker
+  - r_ring_pip_fe_axis_marker
+  - b_r_thumb0
+  - b_r_thumb1
+  - b_r_thumb2
+  - b_r_thumb3
+  - b_r_thumb_null
+  - r_thumb_finger_pad_marker
+  - r_thumb_finger_tip_marker
+  - r_thumb_fingernail_marker
+  - r_thumb_ip_fe_axis_marker
+  - r_thumb_knuckle_marker
+  - r_thumb_mcp_fe_axis_marker
+  - r_thumb_palm_knuckle_marker
+  - r_index_knuckle_marker
+  - r_index_mcp_aa_axis_marker
+  - r_index_mcp_fe_axis_marker
+  - r_index_palm_collider_base0_marker
+  - r_index_palm_collider_base1_marker
+  - r_index_palm_knuckle_marker
+  - r_middle_mcp_aa_axis_marker
+  - r_middle_mcp_fe_axis_marker
+  - r_middle_palm_collider_base0_marker
+  - r_middle_palm_collider_base1_marker
+  - r_middle_palm_knuckle_marker
+  - r_palm_center_marker
+  - r_pinky_knuckle_marker
+  - r_pinky_mcp_aa_axis_marker
+  - r_pinky_mcp_fe_axis_marker
+  - r_pinky_palm_collider_base0_marker
+  - r_pinky_palm_collider_base1_marker
+  - r_pinky_palm_knuckle_marker
+  - r_ring_knuckle_marker
+  - r_ring_mcp_aa_axis_marker
+  - r_ring_mcp_fe_axis_marker
+  - r_ring_palm_collider_base0_marker
+  - r_ring_palm_collider_base1_marker
+  - r_ring_palm_knuckle_marker
+  - r_thumb_cmc_aa_axis_marker
+  - r_thumb_cmc_fe_axis_marker
+  - Collider
+  - Collider (1)
+  quats:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0.023144783, y: -0.14565055, z: -0.04773951, w: 0.9879126}
+  - {x: -0.02585241, y: 0.0071160593, z: -0.0032929424, w: 0.99963504}
+  - {x: -0.016056001, y: 0.02714872, z: 0.072033994, w: 0.99690336}
+  - {x: 5.2041704e-18, y: 1.3877788e-17, z: -1.7997756e-17, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 1.7943107e-16, y: 0.71756595, z: -0.023630999, w: 0.6960895}
+  - {x: 2.0884326e-15, y: 0.7105201, z: -0.03675238, w: 0.70271647}
+  - {x: -0.013031272, y: -0.025489684, z: -0.050983675, w: 0.99828917}
+  - {x: -0.011228235, y: 0.0043788743, z: 0.0019782674, w: 0.99992543}
+  - {x: -0.034319542, y: 0.0046118353, z: 0.09300701, w: 0.9950631}
+  - {x: 2.0816682e-17, y: -1.3877788e-17, z: -1.7347235e-17, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: -1.03328696e-16, y: 0.73815125, z: -0.064592175, w: 0.67153597}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: -3.699927e-16, y: 0.7107332, z: -0.015982324, w: 0.70328015}
+  - {x: -0.20703599, y: 0.14034285, z: -0.0183118, w: 0.96804166}
+  - {x: 0.09761759, y: 0.036921665, z: -0.02435467, w: 0.9942407}
+  - {x: -0.037616648, y: 0.042937703, z: 0.013286048, w: 0.99828094}
+  - {x: 0.0006447509, y: -0.049170654, z: 0.024018826, w: 0.99850136}
+  - {x: -2.7755576e-17, y: 1.3877788e-16, z: 6.938894e-18, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 5.8284866e-18, y: 0.6882537, z: 0.0010032057, w: 0.72546947}
+  - {x: 1.3147193e-16, y: 0.7492193, z: -0.0585215, w: 0.6597315}
+  - {x: -0.04667828, y: 0.085514806, z: -0.0443534, w: 0.99425405}
+  - {x: -0.033632524, y: 0.0027898385, z: -0.005676023, w: 0.99941427}
+  - {x: -0.0034774565, y: -0.029179456, z: 0.025028542, w: 0.99925476}
+  - {x: 4.1633363e-17, y: -5.551115e-17, z: 3.469447e-17, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 1.605726e-15, y: 0.71326023, z: -0.006631614, w: 0.70086795}
+  - {x: 2.3891104e-16, y: 0.71541184, z: -0.048002377, w: 0.6970521}
+  - {x: 0.37538692, y: -0.42458406, z: 0.007778856, w: 0.8238644}
+  - {x: 0.0915463, y: -0.084195435, z: 0.039979164, w: 0.9914294}
+  - {x: 0.052466597, y: -0.055842742, z: -0.062939666, w: -0.9950716}
+  - {x: 0.083505884, y: -0.06501573, z: 0.058274075, w: 0.9926751}
+  - {x: -1.3877788e-17, y: -1.8388069e-16, z: -2.4980018e-16, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: -1.1565109e-16, y: 0.68458194, z: 0.11390015, w: 0.7199822}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 3.7685698e-16, y: 0.7218523, z: -0.12169107, w: 0.6812639}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 1.5147017e-17, y: 0.04358452, z: -0.72520274, w: 0.68715465}
+  - {x: -4.670291e-17, y: 0.70719343, z: 0.04265578, w: 0.7057322}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: -5.0163127e-18, y: -0.012751378, z: -0.7221367, w: 0.69163287}
+  - {x: 4.9666047e-16, y: 0.7409508, z: -0.00991445, w: 0.6714862}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: -3.01168e-17, y: -0.17582493, z: -0.70094967, w: 0.69119835}
+  - {x: 2.365652e-17, y: 0.78830963, z: -0.18553992, w: 0.5866369}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0.077165164, z: -0.7174004, w: 0.6923744}
+  - {x: 2.815203e-17, y: 0.7838948, z: -0.0762138, w: 0.6161985}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: -9.947095e-17, y: 0.8370959, z: -0.2633566, w: -0.47949323}
+  - {x: 1.0748633e-17, y: 0.04351636, z: 0.24580926, w: 0.96834093}
+  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: 0, y: -0.16100103, z: 0, w: 0.9869543}
