@@ -33,7 +33,7 @@ public class StartMenuUiCtrl : MonoBehaviour
             MRUKRoom room = MRUK.Instance.GetCurrentRoom();
             MRUKAnchor tableAnchor = room.Anchors.Find((tableAnchor) =>
             {
-                return tableAnchor.HasLabel("TABLE");
+                return tableAnchor.Label == MRUKAnchor.SceneLabels.TABLE;
 
             });
             if (tableAnchor != null)
@@ -53,9 +53,10 @@ public class StartMenuUiCtrl : MonoBehaviour
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
         List<MRUKAnchor> roomAnchors = room.Anchors;
         List<MRUKAnchor> specificLabelAnchors = new List<MRUKAnchor>();
+
         foreach (MRUKAnchor anchor in roomAnchors)
         {
-            if ((LabelFilter.FromEnum(spawnLabel)).PassesFilter(anchor.AnchorLabels))
+            if (LabelFilter.Included(spawnLabel).PassesFilter(anchor.Label))
             {
                 specificLabelAnchors.Add(anchor);
             }

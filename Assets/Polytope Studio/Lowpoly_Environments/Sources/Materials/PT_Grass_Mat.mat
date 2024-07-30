@@ -97,7 +97,7 @@ Material:
     - _GlossyReflections: 1
     - _Gradient: 0
     - _GradientPower: 1
-    - _LeavesThickness: 0.8
+    - _LeavesThickness: 0.95
     - _MaskClipValue: 0.5
     - _Metallic: 0
     - _Mode: 3

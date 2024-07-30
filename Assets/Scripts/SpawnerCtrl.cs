@@ -53,7 +53,7 @@ public class SpawnerCtrl : MonoBehaviour
         List<MRUKAnchor> specificLabelAnchors = new List<MRUKAnchor>();
         foreach (MRUKAnchor anchor in roomAnchors)
         {
-            if ((LabelFilter.FromEnum(spawnLabel)).PassesFilter(anchor.AnchorLabels))
+            if ((LabelFilter.Included(spawnLabel)).PassesFilter(anchor.Label))
             {
                 specificLabelAnchors.Add(anchor);
             }

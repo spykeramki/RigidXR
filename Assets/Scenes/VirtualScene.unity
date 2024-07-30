@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18365836, g: 0.21207817, b: 0.25863296, a: 1}
+  m_IndirectSpecularColor: {r: 0.18219456, g: 0.21064274, b: 0.25668058, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b896f4d066d4a2a47a6917bee3478ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 2799827660477277890, guid: b0412e2aad3e172499d7386c10ad3106,
+  spawnPrefab: {fileID: 7194771460468465366, guid: 3a511dbe1721db744afdba9e78aff60c,
     type: 3}
   spawnLabel: 8
   ovrCameraRig: {fileID: 188315682093293037}
@@ -6276,6 +6276,7 @@ MonoBehaviour:
     RoomIndex: -1
     RoomPrefabs:
     - {fileID: 1766085727792645261, guid: 989283c9dcb36a24aac11a601001dce0, type: 3}
+    SceneJsons: []
     LoadSceneOnStartup: 1
     SeatWidth: 0.6
     SceneJson: 
