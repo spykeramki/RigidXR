@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18219456, g: 0.21064274, b: 0.25668058, a: 1}
+  m_IndirectSpecularColor: {r: 0.18365836, g: 0.21207817, b: 0.25863296, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -575,6 +575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desk: {fileID: 1206706971}
+  spawnLabel: 8
+  ovrCameraRig: {fileID: 7079690333082418969}
 --- !u!4 &182487523
 Transform:
   m_ObjectHideFlags: 0
