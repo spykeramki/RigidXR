@@ -381,7 +381,6 @@ GameObject:
   m_Component:
   - component: {fileID: 326388496}
   - component: {fileID: 326388497}
-  - component: {fileID: 326388498}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -421,30 +420,6 @@ MonoBehaviour:
   spawnLabel: 8
   ovrCameraRig: {fileID: 188315682093293037}
   viewDirection: 0
---- !u!114 &326388498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326388495}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d14e43228043c04db9e374568cb89a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnOnStart: 1
-  SpawnObject: {fileID: 0}
-  SpawnAmount: 1
-  MaxIterations: 100
-  SpawnLocations: 3
-  Labels: 8
-  CheckOverlaps: 1
-  OverrideBounds: -1
-  LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  SurfaceClearanceDistance: 0.1
 --- !u!1 &340880126
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,6 +6079,7 @@ MonoBehaviour:
     - {fileID: 5618556046422172173, guid: 1550cf68ffa5a344e881275021bc3ffe, type: 3}
     - {fileID: 5618556046422172173, guid: 31818101cde292945ab80af5d14bec54, type: 3}
     - {fileID: 5618556046422172173, guid: c2bd5595e9fe2493a92d4bc0bb264603, type: 3}
+    SceneJsons: []
     LoadSceneOnStartup: 1
     SeatWidth: 0.6
     SceneJson: 
