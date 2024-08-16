@@ -16,6 +16,7 @@ public class GenerateDestroyablePlane : MonoBehaviour
         Invoke("ReplaceGeneratedMeshWithTriangles", 2f);
     }
 
+    //Replacing the scanned mesh of the room with planes that splits into triangles
     public void ReplaceGeneratedMeshWithTriangles()
     {
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
@@ -30,6 +31,7 @@ public class GenerateDestroyablePlane : MonoBehaviour
         currentPlaneDestroying = planesGenerated[0];
     }
 
+    //Setting the plane exactly for walls, ceiling and floor
     private void SetPlaneToMesh(MRUKAnchor anchor)
     {
         Transform anchorMeshTransform = anchor.transform.GetChild(0);
@@ -50,6 +52,7 @@ public class GenerateDestroyablePlane : MonoBehaviour
         anchorMeshTransform.GetComponent<MeshRenderer>().enabled = false;
     }
 
+    //This method will automatically destroys triangles in a plane and all planes will get destroyed after respective triangles are destroyed
     public void DestoryTianglesInPlanes()
     {
         if(planesGenerated.Count > 0)

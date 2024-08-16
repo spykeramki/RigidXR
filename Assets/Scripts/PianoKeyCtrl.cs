@@ -27,6 +27,7 @@ public class PianoKeyCtrl : MonoBehaviour
         StartCoroutine(ReduceSoundSlowly());
     }
 
+    //When the key is released the piano key sound reduces slowly
     private IEnumerator ReduceSoundSlowly()
     {
         float volume = 1f;

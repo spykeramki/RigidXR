@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script divides the mesh into triangles and applies force to each traingle when a method is called
 public class DivideTrianglesOfMesh : MonoBehaviour
 {
     private MeshRenderer m_MeshRenderer;
@@ -39,6 +40,7 @@ public class DivideTrianglesOfMesh : MonoBehaviour
         GetMeshTrianglesAndDivideThem();
     }
 
+    //Accessing the mesh triangles and seperating them into different meshes
     private void GetMeshTrianglesAndDivideThem()
     {
         m_MeshRenderer.enabled = false;
@@ -68,7 +70,6 @@ public class DivideTrianglesOfMesh : MonoBehaviour
             MeshFilter triangleMeshFilter = go.AddComponent<MeshFilter>();
             MeshRenderer triangleRenderer = go.AddComponent<MeshRenderer>();
             TriangleCtrl triangleCtrl =  go.AddComponent<TriangleCtrl>();
-            //MeshCollider triangleMeshCollider = go.AddComponent<MeshCollider>();
             Rigidbody rb = go.AddComponent<Rigidbody>();
 
             List<Vector3> eachTriangleVertices = new List<Vector3>();
@@ -84,43 +85,14 @@ public class DivideTrianglesOfMesh : MonoBehaviour
             triangleMeshFilter.mesh = mesh;
             triangleRenderer.material = m_Material;
             rb.useGravity = false;
-            //triangleMeshCollider.convex = true;
-            //triangleMeshCollider.sharedMesh = mesh;
 
             meshTriangles.Add(triangleCtrl);
 
         }
         
     }
-/*
-    private void StartSendingTrianglesFlyAway()
-    {
-        StartCoroutine(SendTrianglesFlying());
-    }
 
-    private IEnumerator SendTrianglesFlying()
-    {
-        int trianglesCount = meshTriangles.Count;
-        while (meshTriangles.Count >= 0)
-        {
-            trianglesCount = meshTriangles.Count;
-            int trianglesListIndex = Random.Range(0, trianglesCount);
-            float force = Random.Range(20f, 30f);
-            float timing = Random.Range(0.5f, 1f);
-            TriangleCtrl triangleCtrl = meshTriangles[trianglesListIndex].GetComponent<TriangleCtrl>();
-            triangleCtrl.ObjRigidbody.AddForce(((triangleCtrl.ObjTransform.position - Vector3.zero).normalized) * force);
-            triangleCtrl.StartTimerToDestroyObject(10f);
-            meshTriangles.Remove(triangleCtrl.gameObject);
-            yield return new WaitForSeconds(timing);
-        }
-
-        if(trianglesCount < 0)
-        {
-            StopCoroutine("SendTrianglesFlying");
-            Destroy(gameObject);
-        }
-    }*/
-
+    //When called, accessing the rigid body of each triangle and moving them away from origin point
     public void SendTrianglesFlyingOnInteraction()
     {
         int trianglesListCount = meshTriangles.Count;

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private void LateUpdate()
     {
         _skyboxRotation += Time.deltaTime;
+        //Rotating skybox in the Mixed To VirtualReality transition Scene
         if(_skyboxRotation >= 360f)
         {
             _skyboxRotation = 0f;

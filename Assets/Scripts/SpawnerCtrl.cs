@@ -45,7 +45,7 @@ public class SpawnerCtrl : MonoBehaviour
         else { return posB; }
     }
 
-
+    //This function is being called as event in MRUK component
     public void SpawnsPrefabOnDefinedAnchor()
     {
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
@@ -97,6 +97,7 @@ public class SpawnerCtrl : MonoBehaviour
 
             if (anchorPlaneMidCenters.Count > 0)
             {
+                //gets the nearest table anchor midpoint of one of the edges in top surface
                 Vector3 nearestMidPositionInWorld = nearestAnchor.transform.TransformPoint(anchorPlaneMidCenters[currentPoint]) ;
                 for(int i = 0; i < anchorPlaneMidCenters.Count; i++)
                 {
@@ -107,7 +108,8 @@ public class SpawnerCtrl : MonoBehaviour
                         nearestMidPositionInWorld = pos;
                     }
                 }
-
+                
+                //Setting the direction that the spawned object should face
                 Quaternion direction;
                 if(viewDirection == ViewDirection.TOWARDS)
                 {
@@ -129,6 +131,7 @@ public class SpawnerCtrl : MonoBehaviour
         return Vector3.Distance(pos, ovrCameraRig.centerEyeAnchor.position);
     }
 
+    //Manually Change the object position of the spawned object
     private void ChangeObjPosition()
     {
         currentPoint++;

@@ -27,6 +27,7 @@ public class PianoCtrl : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<PianoKeyCtrl>().PlayAudio();
+        // when the piano key is pressed, triangles get destroyed
         if (gameManager != null)
         {
             gameManager.destroyablePlaneParentCtrl.DestoryTianglesInPlanes();

@@ -27,6 +27,7 @@ public class StartMenuUiCtrl : MonoBehaviour
         }
     }
 
+    // In the start menu adjusting the table and UI direction with respect to real world table mesh
     public void AttachDeskToTheTable()
     {
         
@@ -43,11 +44,13 @@ public class StartMenuUiCtrl : MonoBehaviour
         }
     }
 
+    //Changing desk direction manually with controller input
     private void ChangeDeskDirection()
     {
         desk.Rotate(new Vector3(0f, desk.rotation.y + 90f, 0f));
     }
 
+    //Accessing the table anchor and getting the direction of nearest edge midpoint and direction from it.
     public Quaternion GetTableDirection()
     {
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();

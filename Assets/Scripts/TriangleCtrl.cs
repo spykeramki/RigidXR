@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script to give access to the triangle data od meshes 
 public class TriangleCtrl : MonoBehaviour
 {
     public MeshRenderer m_MeshRenderer;
@@ -34,6 +35,7 @@ public class TriangleCtrl : MonoBehaviour
         ObjTransform = transform;
     }
 
+    //Destroying the triangle after some time of moving away from origin
     public void StartTimerToDestroyObject(float timer)
     {
         StartCoroutine(TimerToDestroyObject(timer));
