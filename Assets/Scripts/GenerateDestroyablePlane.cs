@@ -32,6 +32,7 @@ public class GenerateDestroyablePlane : MonoBehaviour
     }
 
     //Setting the plane exactly for walls, ceiling and floor
+    //Created following method through a reference that I couldn't find later
     private void SetPlaneToMesh(MRUKAnchor anchor)
     {
         Transform anchorMeshTransform = anchor.transform.GetChild(0);
